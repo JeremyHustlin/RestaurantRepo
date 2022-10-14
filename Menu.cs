@@ -26,7 +26,9 @@ namespace ConsoleApp2
 
 
 
+           
             int nr_ordine;
+            int nr_secret = 15;
             Console.WriteLine(Command(Dish._Menu));
 
              int Command(Dish choice)
@@ -66,13 +68,17 @@ namespace ConsoleApp2
 
                             if (a == 1)
                             {
+                                Console.WriteLine($"Achitati {pret_cheese  } lei la casa");
+                                Console.WriteLine($"+{nr_secret} lei ingredient");
                                 goto case Dish._Ingredient;
                             }
                             else if (a == 0)
                             {
                                 Console.WriteLine($"\n1.Bucatar:{second_cook} casa 2");
-
+                                Console.WriteLine($"Achitati {pret_cheese} lei la casa");
+                                
                                 goto case Dish._Comanda;
+                                
                             }
                         }
                         else if (nr_ordine == 2)
@@ -85,11 +91,14 @@ namespace ConsoleApp2
 
                             if (a == 1)
                             {
+                                Console.WriteLine($"Achitati {pret_capricioasa  } lei la casa");
+                                Console.WriteLine($"+{nr_secret} lei ingredient");
                                 goto case Dish._Ingredient;
                             }
                             else if (a == 0)
                             {
                                 Console.WriteLine($"\n1.Bucatar:{first_cook} casa 1");
+                                Console.WriteLine($"Achitati {pret_capricioasa} lei la casa");
                                 goto case Dish._Comanda;
                             }
                         }
@@ -103,11 +112,14 @@ namespace ConsoleApp2
 
                             if (a == 1)
                             {
+                                Console.WriteLine($"Achitati {pret_rancho  } lei la casa");
+                                Console.WriteLine($"+{nr_secret} lei ingredient");
                                 goto case Dish._Ingredient;
                             }
                             else if (a == 0)
                             {
                                 Console.WriteLine($"\n1.Bucatar:{first_cook} casa 1");
+                                Console.WriteLine($"Achitati {pret_rancho} lei la casa");
 
                                 goto case Dish._Comanda;
                             }
@@ -122,11 +134,14 @@ namespace ConsoleApp2
 
                             if (a == 1)
                             {
+                                Console.WriteLine($"Achitati {pret_margarita  } lei la casa");
+                                Console.WriteLine($"+{nr_secret} lei ingredient");
                                 goto case Dish._Ingredient;
                             }
                             else if (a == 0)
                             {
                                 Console.WriteLine($"\n1.Bucatar:{second_cook} casa 2");
+                                Console.WriteLine($"Achitati {margarita} lei la casa");
 
                                 goto case Dish._Comanda;
                             }
@@ -203,7 +218,8 @@ namespace ConsoleApp2
                         break;
 
                 }
-                return (int) Dish._Menu;
+                
+                return 0;
 
             }
            
